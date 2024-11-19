@@ -2,9 +2,32 @@
 
 A Python script to sync local folders with OneDrive using Microsoft Graph API. This script supports automatic token refresh for long-running operations and maintains folder hierarchy during upload.
 
-## Context
+## The Problem
 
-This script was created to address a specific sync issue with an older Mac Mini that struggles to run the official OneDrive client continuously. Instead of running the resource-intensive OneDrive software constantly, this script provides a lightweight alternative for end-of-day (EOD) synchronization.
+It all started with my trusty old Mac Mini from 2018. Like a loyal companion, it had been by my side through countless projects and late-night coding sessions. However, as time passed, it began showing its age, particularly when dealing with modern cloud sync solutions.
+
+The breaking point came when I tried running the official OneDrive client. What should have been a simple background process turned into a daily struggle. My once-reliable Mac Mini would transform into an electronic heater – fan whirring like a small jet engine, the system gasping for breath with every sync operation.
+
+Opening Activity Monitor became a morning ritual, only to find OneDrive hoarding RAM like a digital dragon, leaving mere scraps for other applications. Simple tasks like opening a browser or responding to emails became an exercise in patience. The symptoms were impossible to ignore:
+
+- OneDrive client greedily consuming over 70% of my available RAM
+- System response time slowing to a crawl during sync operations
+- Random freezes that required force restarts
+- Fan noise so loud it became a running joke in video calls
+- CPU temperature rising faster than my frustration
+
+## The Search for Solutions
+
+Determined to find a solution, I embarked on what felt like a digital odyssey. First, I tried the obvious route – the official OneDrive client. "Surely, there must be some settings to make it more resource-friendly," I thought. After hours of tweaking and optimization attempts, I had to admit defeat. My aging Mac Mini simply couldn't handle it.
+
+Next, I turned to the OneDrive web interface. While this worked for basic file access, it quickly became apparent that manually uploading large folders and maintaining file structure was about as efficient as trying to empty the ocean with a teaspoon.
+
+The search led me down various rabbit holes:
+1. OneDrive CLI tools seemed promising until I discovered they were either Windows-centric or abandoned macOS support years ago
+2. Third-party sync tools either wanted a monthly subscription (adding up to more than my OneDrive subscription itself) or had reliability issues that made me question their safety
+3. Various hacky solutions from forums that seemed more likely to create problems than solve them
+
+It was clear that if I wanted a solution that worked for my specific needs, I'd have to build it myself. And thus began the journey of creating this Python script – a lightweight, efficient solution that would only run when needed, giving my loyal Mac Mini the respect and rest it deserves.
 
 ### Why This Script?
 
